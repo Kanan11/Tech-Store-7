@@ -5,10 +5,13 @@ body {
 }    
 
 h1 {
-    font-size: 50px;
+    font-size: 33px;
+    font-family: sans-serif;
     margin: 15px;
     color:#FFFFFF;
-  }
+    margin-left: 40px;
+    margin-right: 30px;
+}
 
 .top_bar {
 background: #212121;    
@@ -22,6 +25,7 @@ justify-content: space-between;
 
 a {
     color: #FFFFFF;
+    text-decoration: none;
 }
 
 .main {
