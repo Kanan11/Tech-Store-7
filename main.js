@@ -29,3 +29,56 @@ function addProductsToWebpage() {
     
     // TODO: Remove the console.log and these comments when you've read them.
 }
+
+const productItems = [
+    {
+        "title": "iPhone X",
+        "description": "Last years phone from Apple with a beautiful all display front.",
+        "image": "iPhoneX.png",
+        "price": 11495
+    },{
+        "title": "One Plus 5",
+        "description": "Sleek and powerful smartphone from One Plus.",
+        "image": "OnePlus5.png",
+        "price": 4995
+    },{
+        "title": "Galaxy S8",
+        "description": "Really cool edge to edge smartphone from Samsung.",
+        "image": "SamsungS8.png",
+        "price": 7990
+    },{
+        "title": "LG V30",
+        "description": "Super nice and beautiful smartphone from LG.",
+        "image": "LGV30.png",
+        "price": 7495
+    }
+];
+
+function phonesStartview(displayPhone) {
+    return ` <div class="products">
+    <h1 class="itemTitle"> ${displayPhone.title} </h1>
+    <h4 class="itemBeskrivning"> ${displayPhone.description} </h4>
+    <img class="itemPhoto" src="${displayPhone.image}"> 
+    <h3 class="itemPrice"> ${displayPhone.price} </h3>
+    <button onclick="clickFunction()" class="itemButton"><i class="fas fa-cart-arrow-down"></i> Lägg till i kundvagnen </button>
+    </div> `
+}
+
+document.getElementById("products").innerHTML = `
+ ${productItems.map(phonesStartview).join("")}
+`
+
+
+function clickFunction() {
+    document.getElementById("cartNumber").innerHTML = (1)
+}
+
+function clickFunction() {
+    if (typeof(Storage) !== "undefined") {
+      if (localStorage.clickcount) {
+        localStorage.clickcount = Number(localStorage.clickcount) +1;
+      } else {
+        localStorage.clickcount = 1;
+      } document.getElementById("cartNumber").innerHTML = localStorage.clickcount;
+    } 
+  }
