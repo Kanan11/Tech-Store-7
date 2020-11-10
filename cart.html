@@ -10,7 +10,7 @@
         <!-- Visit www.fontawesome.com on how to add font icons to your project is DONE-->
         <!-- Link your stylesheet file/files, do NOT write styles in the html file! -->
         <link rel="stylesheet" href="style.css">
-        <script src="./main.js"></script>
+        <script defer src="./cart.js"></script>
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
         <link rel="icon" href="/assets/OnePlus5.png">
 
@@ -23,6 +23,7 @@
                         <h1 id="demo"><a href="/index.html">TechStore</h1></a> 
                     </div>
                     <div class="cart">
+                        <div id="cartNumber"></div>
                         <h1><a href="/cart.html"><i class="fas fa-shopping-cart"></i></a></h1>                    
                     </div>
                  </div>
@@ -31,7 +32,10 @@
         </header>
         <main>
             
+            <div id="cartProducts" > </div>
+            <div id="totalAmount"> </div>
            
+            <button id="alertSum">Slutför ditt Köp</button>
         </main>
         <footer>
             

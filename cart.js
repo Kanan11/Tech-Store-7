@@ -1,46 +1,54 @@
-var listOfProducts;
+var totalAmount = 0
 
 /** Get products from the json file and store it in a gobal variable */
-function loadProducts() {
+/* function loadProducts() {
     fetch("./products.json")
     .then(function(response) {
         return response.json();
     })
     .then(function(products) {
         listOfProducts = products;
-        addProductsToWebpage();
+        addProductsToCart();
     });
-}
+} */
 
 
 function initSite() {
-    loadProducts();
-    // This would also be a good place to initialize other parts of the UI
+ShowProductsInCart()
+updateCartCount()
+
+document.getElementById("alertSum").addEventListener("click", function() {
+    alert("Den totala summan är: " + totalAmount + "kr")
+} )
+
 }
 
-/** Uses the loaded products data to create a visible product list on the website */
-
-    // Add your code here, remember to brake your code in to smaller function blocks
-    // to reduce complexity and increase readability. Each function should have
-    // an explainetory comment like the one for this function, see row 22.
-    
-    // TODO: Remove the console.log and these comments when you've read them.
-
-
 function addProductsToWebpage() {
-    console.log(listOfProducts);
+    // Check your console to see that the products are stored in the listOfProducts varible.
+/*     console.log(listOfProducts);
+ */}
 
-    let container = document.createElement("div")
+
+function ShowProductsInCart () {
+
+
+
+    let container = document.getElementById("cartProducts")
     container.style.display = "flex"
     container.style.justifyContent = "center"
     container.style.flexDirection = "column"
+
+
+    var listOfProducts = getCartProducts()
     
         for (let i = 0; i < listOfProducts.length; i++) {
             const product  = listOfProducts[i];
-
+            const productIndex = i;
+            
+            totalAmount = totalAmount + product.price
     
             let displayPhone = document.createElement("div")
-            displayPhone.classList.add("products", "gallery")
+            displayPhone.classList.add("products", "cart")
 
             let itemTitle = document.createElement("h1")
             itemTitle.classList.add("itemTitle")
@@ -68,30 +76,27 @@ function addProductsToWebpage() {
     
             let itemButton = document.createElement("button")
             itemButton.classList.add("itemButton")
+            itemButton.dataset.productIndex = productIndex
 
             itemButton.addEventListener("click", e => {
-                var cart 
+                var cart = getCartProducts()
 
-                if (localStorage.cart == undefined) {
-                cart = []
-                } else {
-                    cart = JSON.parse(localStorage.cart)
-                }
-
-                cart.push(product) 
+                cart = cart.filter(function (_, cartIndex) {
+                    return cartIndex != productIndex
+                })
                 localStorage.cart = JSON.stringify(cart) 
-                updateCartCount()
+                window.location.reload()
 
             })
             displayPhone.appendChild(itemButton)
 
             let itemIcon = document.createElement("i")
-            itemIcon.classList.add("fas", "fa-cart-arrow-down")
+            itemIcon.classList.add("fas", "fa-trash-alt")
             itemButton.appendChild(itemIcon)
             
 
             let itemSpan = document.createElement("span")
-            itemSpan.textContent = "Lägg till i kundvagn"
+            itemSpan.textContent = "Ta Bort"
 
             itemButton.appendChild(itemSpan)
 
@@ -99,26 +104,27 @@ function addProductsToWebpage() {
             container.appendChild(displayPhone)
         }
     
-        document.body.appendChild(container)
+        let totalAmountElement = document.getElementById("totalAmount")
+        totalAmountElement.textContent = `Totalt pris: ${totalAmount} kr`
+
 
 }
 
 
-function updateCartCount () {
-    var count = 0
+
+function getCartProducts () {
 
     if (localStorage.cart !== undefined) {
+        return JSON.parse(localStorage.cart)
+    }  
+    return []
+}
 
-    count = JSON.parse(localStorage.cart).length
-    }
-
+function updateCartCount () {
+    var count = getCartProducts().length
     document.getElementById("cartNumber").textContent = count 
-
 
 }
 
 
 
-
-
- 

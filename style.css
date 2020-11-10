@@ -61,7 +61,7 @@ a {
 }
 
 .products {
-    margin-top: 130px;
+    margin-top: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -83,22 +83,37 @@ a {
 }
 
 .itemPhoto {
-    width: 200px;
-    height: 300px;
+    width: auto;
+    height: 350px;
 }
 
 .itemButton {
     border-radius: 8px;
-    background-color: #5596F5;
-    color: #F5F5F5;
-    border: 2px solid #5596F5;
     height: 45px;
-    width: 300px;
     font-size: 20px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    border: none;
+    padding: 8px;
 }
+
+.products.gallery .itemButton {
+    background-color: #5596F5;
+    color: #F5F5F5;
+}
+
+
+.products.cart .itemButton {
+    background-color: #fe0000;
+    color: #F5F5F5;
+}
+
+.itemButton i {
+    margin-right: 8px;
+}
+
+
 
 
 
