@@ -36,7 +36,7 @@ function ShowProductsInCart () {
     let container = document.getElementById("cartProducts")
     container.style.display = "flex"
     container.style.justifyContent = "center"
-    container.style.flexDirection = "column"
+    container.style.flexDirection = "row"
 
 
     var listOfProducts = getCartProducts()

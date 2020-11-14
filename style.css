@@ -29,7 +29,7 @@ p {
 }
 
 h1 {
-    font-size: 33px;
+    font-size: 28px;
     font-family: sans-serif;
     margin: 15px;
     color:#FFFFFF;
@@ -68,8 +68,8 @@ a {
 }
 
 .itemTitle {
-    font-size: 50px;
-    color: #212121;
+/*     font-size: 25 px;
+ */    color: #212121;
 }
 
 .itemBeskrivning {
@@ -84,7 +84,7 @@ a {
 
 .itemPhoto {
     width: auto;
-    height: 350px;
+    height: 230px;
 }
 
 .itemButton {
@@ -113,7 +113,40 @@ a {
     margin-right: 8px;
 }
 
+#alertSum {
+    border-radius: 8px;
+    height: 40px;
+    font-size: 18px;
+    align-items: center;
+    border: none;
+    padding: 8px;
+    background-color: #5596F5;
+    color: #F5F5F5;
+    width: 180px;
+}
 
+#main {
+    text-align: center;
+}
 
+.products.cart {
+    padding: 15px;
+    border: 2px solid #5596F5;
+    background-color:#F5F5F5;
+    border-radius: 30px;
+    width: 290px;
+    text-align: center;
+    margin-right: 20px;
+   }
 
+#cartProducts {
+    display: flex;
+    text-align: center;
+}
 
+#totalAmount {
+    font-size: 35px;
+    font-family: sans-serif;
+    margin: 30px;
+    
+}
