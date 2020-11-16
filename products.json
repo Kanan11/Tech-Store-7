@@ -22,5 +22,41 @@
         "description": "Super nice and beautiful smartphone from LG.",
         "image": "LGV30.png",
         "price": 7495
+    },
+    {
+        "title": "Huawei P40 Pro+",
+        "description": "Design and functionality with a touch of genius.",
+        "image": "HuaweiP40Pro+.png",
+        "price": 13990
+    },
+    {
+        "title": "iPhone 12 Pro Max",
+        "description": "For everyone that is aiming for the best.",
+        "image": "iPhone12PMaxGold.png",
+        "price": 17865
+    },
+    {
+        "title": "Motorola Edge+",
+        "description": "6.7 inch screen and 108 megapixel camera at your disposal.",
+        "image": "MotorolaEdge+.png",
+        "price": 11990
+    },
+    {
+        "title": "Samsung Galaxy S10+",
+        "description": "The bestseller from 2019 is back.",
+        "image": "SamsungGalaxyS10+.png",
+        "price": 9565
+    },
+    {
+        "title": "Samsung Galaxy Z Fold2",
+        "description": "It's either your rent for several months or this phone.",
+        "image": "SamsungGalaxyZFold2.png",
+        "price": 22690
+    },
+    {
+        "title": "Xiaomi Mi 10 Pro",
+        "description": "AMOLED with TrueColor technique makes this the phone you want.",
+        "image": "XiaomiMi10Pro.png",
+        "price": 12065
     }
 ]
