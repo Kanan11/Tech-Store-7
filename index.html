@@ -1,44 +1,42 @@
 <!DOCTYPE HTML>
 
 <html>
+    <head>
+        <title>TechStore</title>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- Visit www.fontawesome.com on how to add font icons to your project is DONE-->
+        <!-- Link your stylesheet file/files, do NOT write styles in the html file! -->
+        <link rel="stylesheet" href="style.css">
+        <script defer src="./main.js"></script>
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <link rel="icon" href="/assets/OnePlus5.png">
 
-<head>
-    <title>TechStore</title>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body onload="initSite()">
+        <header>
+            <!-- Your header title and shopping cart button goes here  -->
+                    <div class="top_bar">
+                    <div class="logo">
+                        <h1 id="demo"><a href="/index.html">TechStore</h1></a> 
+                    </div>
+                    <div class="cart">
+                        <div id="cartNumber"></div>
+                        <p><a href="/cart.html"><i class="fas fa-shopping-cart"></i></a></p>                  
+                    </div>
+                 </div>
+                 
 
-    <!-- Visit www.fontawesome.com on how to add font icons to your project is DONE-->
-    <!-- Link your stylesheet file/files, do NOT write styles in the html file! -->
-    <link rel="stylesheet" href="style.css">
-    <script defer src="./main.js"></script>
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-    <link rel="icon" href="/assets/OnePlus5.png">
-</head>
+        </header>
+        <main>
+            <div id="products"> </div>
+            
+        </main>
+        <footer>
+            
+        </footer>
 
-<body onload="initSite()">
-    <header>
-        <!-- Your header title and shopping cart button goes here  -->
-        <div class="top_bar">
-            <div class="logo">
-                <h1 id="demo"><a href="/index.html">TechStore</h1></a>
-            </div>
-            <div class="cart">
-                <div id="cartNumber"></div>
-                <h1><a href="/cart.html"><i class="fas fa-shopping-cart"></i></a></h1>
-            </div>
-        </div>
-    </header>
-
-    <main>
-        <div id="products"> </div>
-
-    </main>
-
-    <footer>
-
-    </footer>
-
-</body>
+    </body>
 </html>
