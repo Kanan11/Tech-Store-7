@@ -1,4 +1,20 @@
 
+
+@media screen and (max-width: 992px) {
+    #main {
+      background-color: blue;
+      display: flex;
+    }
+    
+  }
+  
+  /* On screens that are 600px wide or less, the background color is olive */
+  @media screen and (max-width: 600px) {
+    #main {
+      background-color: olive;
+    }
+}
+
 body {
     margin: 0;
 }  
