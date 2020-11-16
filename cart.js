@@ -31,8 +31,6 @@ function addProductsToWebpage() {
 
 function ShowProductsInCart() {
 
-
-
     let container = document.getElementById("cartProducts")
     container.style.display = "flex"
     container.style.justifyContent = "center"
@@ -52,11 +50,11 @@ function ShowProductsInCart() {
 
         let itemPhoto = document.createElement("img")
         itemPhoto.src = "/assets/" + product.image
-        itemPhoto.classList.add("itemPhoto")
+        itemPhoto.classList.add("cartPhoto")
         displayPhone.appendChild(itemPhoto)
 
         let itemTitle = document.createElement("h1")
-        itemTitle.classList.add("itemTitle")
+        itemTitle.classList.add("cartTitle")
         itemTitle.textContent = product.title
         displayPhone.appendChild(itemTitle)
 

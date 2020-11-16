@@ -3,6 +3,10 @@ body{
     padding: 0;
 }  
 
+main {
+    margin: 0 0 20px 0;
+}
+
 header{
     position: fixed;
 }
@@ -53,7 +57,7 @@ a{
 }
 
 .products{
-    margin: 100px 0;
+    margin: 80px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -101,6 +105,7 @@ a{
 .products.cart .itemButton{
     background-color: #fe0000;
     color: #F5F5F5;
+    font-size: 15px;
 }
 
 .itemButton i{
@@ -116,17 +121,17 @@ a{
     padding: 8px;
     background-color: #5596F5;
     color: #F5F5F5;
-    width: 180px;
+    width: 15%;
 }
 
 .products.cart{
     padding: 15px;
     border: 2px solid #5596F5;
     background-color:#F5F5F5;
-    border-radius: 30px;
-    width: 290px;
+    border-radius: 10px;
+    width: auto;
     text-align: center;
-    margin-right: 20px;
+    margin: 20px 15px 0px 0px;
    }
 
 #cartProducts{
@@ -144,4 +149,32 @@ a{
 
 #cartButton{
     text-align: center;
+}
+
+
+.cartPhoto {
+    width: auto;
+    height: 150px;
+}
+
+.cartTitle {
+    font-size: 30px;
+    color: #212121;
+}
+
+#headLine {
+    margin-top: 80px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+    font-size: 40px;
+    font-family: sans-serif;
+    font-weight: 600;
+}
+
+h2 {
+    margin-left: 20px;
 }
