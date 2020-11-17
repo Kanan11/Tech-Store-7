@@ -1,14 +1,33 @@
+@media screen and (max-width: 800px){
+    .cart:nth-of-type(2) {background-color: #212121;}
+    div:nth-child(even) {background-color: #F5F5F5;}
+    .products{
+        margin: 25px 0 10px 0;
+    }
+    .products.gallery{
+        margin: 30px 0 0 0;
+        padding: 0 0 30px 0;
+    }
+    h4{
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .cart:nth-of-type(2) {background-color: #212121;}
+    div:nth-child(even) {background-color: #F5F5F5;}
+    .products.gallery{
+        margin: 25px 0 10px 0;
+    }
+}
+
 body{
     margin: 0;
     padding: 0;
 }  
 
-main {
+main{
     margin: 0 0 20px 0;
-}
-
-header{
-    position: fixed;
 }
 
 .cart{
@@ -31,10 +50,10 @@ h1{
     margin: 13px 0 10px 10px;
 }
 
-.top_bar {
+.top_bar{
     background: #212121;    
     position: fixed;
-    top: 0px;
+    top: 0;
     right: 0;
     left: 0;
     display: flex;
@@ -44,16 +63,6 @@ h1{
 a{
     color: #FFFFFF;
     text-decoration: none;
-}
-
-.main{
-    top: 0px;
-    right: 0;
-    left: 0;
-    margin-top: 90px;
-    position: static;
-    display: flex;
-    text-align: center;
 }
 
 .products{
@@ -81,7 +90,7 @@ a{
 
 .itemPhoto{
     width: auto;
-    height: 350px;
+    height: 310px;
 }
 
 .itemButton{
@@ -152,17 +161,17 @@ a{
 }
 
 
-.cartPhoto {
+.cartPhoto{
     width: auto;
     height: 150px;
 }
 
-.cartTitle {
+.cartTitle{
     font-size: 30px;
     color: #212121;
 }
 
-#headLine {
+#headLine{
     margin-top: 80px;
 
     display: flex;
@@ -175,6 +184,6 @@ a{
     font-weight: 600;
 }
 
-h2 {
+h2{
     margin-left: 20px;
 }
