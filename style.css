@@ -138,7 +138,7 @@ a{
     padding: 8px;
     background-color: #5596F5;
     color: #F5F5F5;
-    width: 15%;
+    width: 160px;
 }
 
 .products.cart{
@@ -148,7 +148,7 @@ a{
     border-radius: 10px;
     width: auto;
     text-align: center;
-    margin: 20px 15px 0px 0px;
+    margin: 5px;
    }
 
 #cartProducts{
