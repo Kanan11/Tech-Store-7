@@ -1,76 +1,6 @@
-window.addEventListener("load", initSite)
-document.getElementById("loginButton").addEventListener("click", logIn)
-document.getElementById("logOutButton").addEventListener("click", logOut)
-function initSite() {
-    hanteraInitSida() 
-}
-function hanteraInitSida() {
-    let LoggedInUser = getLoggedInUser()
-    if (LoggedInUser) {
-        document.getElementById("loginBox").classList.add("hide")
-        document.getElementById("hide").classList.remove("hide")
-    }
-}
-function getLoggedInUser() {
-    return localStorage.getItem("LoggedInUser")
-}
-function getUsers() {
-    let userList = localStorage.getItem("userList")
-    if(!userList) {
-        return []
-    }
-    userList = JSON.parse(userList)
-    return userList
-}
-function logIn() {
-   let username = document.getElementById("userNameInput").value
-   let password = document.getElementById("LosenordInput").value
-   
-   let userList = getUsers()
-   
-   let hittaUser = undefined
-   
-   userList.forEach(function(user) {
-if(username == user.username && password == user.password) {
-    hittaUser = user
-    }   
-})
-
-if(hittaUser) {
-    localStorage.setItem("duLoggadInSom", JSON.stringify(hittaUser))
-    document.getElementById("loginBox").classList.add("hide")
-    document.getElementById("hide").classList.remove("hide")
-}
-console.log(hittaUser)
-
-}
-function logOut() {
-    localStorage.removeItem("loggedInUser")
-    
-    document.getElementById("loginBox").classList.remove("hide")
-    document.getElementById("hide").classList.add("hide")
-}
-let users = [
-        {
-            username: "elin",
-            password: "1111"
-        },
-        {
-            username: "ossian",
-            password: "2222"
-        },
-        {
-            username: "kanan",
-            password: "3333"
-        }
-    ]
-
-localStorage.setItem("userList", JSON.stringify(users))
-
-
 var listOfProducts;
 
-/** Get products from the json file and store it in a gobal variable */
+
 function loadProducts() {
     fetch("./products.json")
         .then(function (response) {
@@ -86,21 +16,9 @@ function loadProducts() {
 function initSite() {
     loadProducts();
     updateCartCount();
-    // This would also be a good place to initialize other parts of the UI
 }
 
-/** Uses the loaded products data to create a visible product list on the website */
-
-// Add your code here, remember to brake your code in to smaller function blocks
-// to reduce complexity and increase readability. Each function should have
-// an explainetory comment like the one for this function, see row 22.
-
-// TODO: Remove the console.log and these comments when you've read them.
-
-
 function addProductsToWebpage() {
-    console.log(listOfProducts);
-
     let container = document.createElement("div")
     container.style.display = "flex"
     container.style.justifyContent = "center"
@@ -169,7 +87,7 @@ function addProductsToWebpage() {
 
         container.appendChild(displayPhone)
     }
-    
+
     document.body.appendChild(container)
 }
 

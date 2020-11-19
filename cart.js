@@ -1,18 +1,5 @@
 var totalAmount = 0
 
-/** Get products from the json file and store it in a gobal variable */
-/* function loadProducts() {
-    fetch("./products.json")
-    .then(function(response) {
-        return response.json();
-    })
-    .then(function(products) {
-        listOfProducts = products;
-        addProductsToCart();
-    });
-} */
-
-
 function initSite() {
     ShowProductsInCart()
     updateCartCount()
@@ -20,14 +7,9 @@ function initSite() {
     document.getElementById("alertSum").addEventListener("click", function () {
         alert("Den totala summan är: " + totalAmount + "kr")
     })
-
 }
 
-function addProductsToWebpage() {
-    // Check your console to see that the products are stored in the listOfProducts varible.
-/*     console.log(listOfProducts);
- */}
-
+function addProductsToWebpage() { }
 
 function ShowProductsInCart() {
 
@@ -116,6 +98,3 @@ function updateCartCount() {
     document.getElementById("cartNumber").textContent = count
 
 }
-
-
-
