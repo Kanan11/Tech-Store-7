@@ -1,15 +1,22 @@
 @media screen and (max-width: 800px){
     .cart:nth-of-type(2) {background-color: #212121;}
     div:nth-child(even) {background-color: #F5F5F5;}
-    .products{
-        margin: 25px 0 10px 0;
-    }
+
     .products.gallery{
         margin: 30px 0 0 0;
         padding: 0 0 30px 0;
     }
     h4{
         text-align: center;
+    }
+    #cartProducts{
+        background-color: #FFFFFF;
+    }
+    #totalAmount{
+        background-color: #FFFFFF;
+    }
+    #cartButton{
+        background-color: #FFFFFF;
     }
 }
 
@@ -131,7 +138,7 @@ a{
     padding: 8px;
     background-color: #5596F5;
     color: #F5F5F5;
-    width: 15%;
+    width: 160px;
 }
 
 .products.cart{
@@ -141,7 +148,7 @@ a{
     border-radius: 10px;
     width: auto;
     text-align: center;
-    margin: 20px 15px 0px 0px;
+    margin: 5px;
    }
 
 #cartProducts{
